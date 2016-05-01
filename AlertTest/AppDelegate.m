@@ -15,8 +15,18 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    self.window =[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    self.window.backgroundColor =[UIColor whiteColor];
+    
+    self.mainVC=[[ViewController alloc] initWithFrame:self.window.frame];
+    
+    [self.window setRootViewController:self.mainVC];
+    
+    [self.window makeKeyAndVisible];
+ 
     return YES;
 }
 
